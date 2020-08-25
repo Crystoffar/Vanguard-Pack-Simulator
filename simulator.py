@@ -67,5 +67,16 @@ def openPack():
         rollNormal()
     rollFixed()
 
+def openBox():
+    for i in range(30):
+        answer = "n"
+        while answer != "y" and "Y":
+            openPack()
+            print("You have opened %s / 30 packs" %(i + 1))
+            if i != 29:
+                answer = input("Open next pack? (Y/N) ")
+            else:
+                answer = input("Finish? (Y/N) ")
+
 importSet()
-openPack()
+openBox()
